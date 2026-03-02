@@ -17,12 +17,11 @@ const PORT = process.env.PORT || 5000;
 // =========================
 // ✅ Middleware
 // =========================
-app.use(
-  cors({
-    origin: "https://buyhive-7.onrender.com", // 🔁 replace with YOUR frontend URL
-    credentials: true
-  })
-);
+app.use(cors({
+  origin: "https://buyhive-frontend1.onrender.com",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
