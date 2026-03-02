@@ -18,8 +18,7 @@ const PORT = process.env.PORT || 5000;
 // ✅ Middleware
 // =========================
 app.use(cors({
-  origin: "https://buyhive-frontend1.onrender.com",
-  methods: ["GET", "POST", "PUT", "DELETE"],
+  origin: process.env.FRONTEND_URL,
   credentials: true
 }));
 
